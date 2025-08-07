@@ -76,7 +76,21 @@ function classificaSenha(tamanhoAlfabeto) {
     valorEntropia.textContent = "Um computador pode levar até " + Math.floor(2 ** entropia / (100e6 * 60 * 60 * 24)) + " dias para descobrir essa senha.";
 }
 
-
-
-
-
+function copiarSenha() {
+    const campoSenha = document.getElementById("campo-senha");
+    const botaoCopiar = document.querySelector(".copiar");
+    if (campoSenha.value) {
+        navigator.clipboard.writeText(campoSenha.value)
+            .then(() => {
+                // Feedback visual: muda texto do botão temporariamente
+                const textoOriginal = botaoCopiar.textContent;
+                botaoCopiar.textContent = "✅ Copiado!";
+                setTimeout(() => {
+                    botaoCopiar.textContent = textoOriginal;
+                }, 1500);
+            })
+            .catch(err => {
+                console.error('Erro ao copiar senha: ', err);
+            });
+    }
+}
