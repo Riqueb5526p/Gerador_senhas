@@ -128,8 +128,15 @@ body {
 .parametro-senha-botoes {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 10px;
   margin-top: 8px;
+}
+
+.parametro-senha__texto {
+  font-size: 20px;
+  min-width: 30px;
+  text-align: center;
 }
 
 .parametro-senha__botao {
@@ -147,18 +154,9 @@ body {
   background-color: var(--destaque);
 }
 
-.parametro-senha-textos {
-  display: flex;
-  justify-content: space-between;
-  font-size: 14px;
-  color: #94a3b8;
-  margin-top: 4px;
-  padding: 0 2px;
-}
-
-}
-
 .parametro-senha-checkbox {
+  display: flex;
+  align-items: center;
   margin: 6px 0;
 }
 
@@ -188,6 +186,14 @@ label {
   border-radius: 8px;
 }
 
+.parametro-senha-textos {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #94a3b8;
+  margin-top: 12px;
+  padding: 0 2px;
+}
 
 .fraca {
   background-color: #ef4444;
@@ -203,5 +209,3 @@ label {
   background-color: #00ff85 !important;
   width: 100%;
 }
-
-
